@@ -1,5 +1,7 @@
 
+import { ProxyState } from "../AppState.js"
 import {todoService} from "../Services/TodoService.js"
+
 
 
 
@@ -19,7 +21,12 @@ createNewTodo(listItemid){
     listItemid: listItemid
   }
   todoService.createNewTodo(TodoData)
-  console.log( 'is it working', TodoData)
+  form.reset()
+}
+
+
+deleteTodo(id){
+  todoService.deleteTodo(id)
 }
 
 }

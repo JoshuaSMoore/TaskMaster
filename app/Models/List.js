@@ -13,7 +13,7 @@ get Template(){
   return /*html*/ `
   <div class="col-md-3 text-center d-flex justify-content-between me-2">
   <div class = "card-header ListCard p-2">
-  <h4 class = "text-center">${this.name} <button onclick = "app.listItemsController.deleteListItem('${this.id}')" class="btn-close ps-5" aria-label="Close"></button> </h4>
+  <h4 class = "text-center">${this.name} <button onclick = "app.listItemsController.deleteListItem('${this.id}')" id = "deleted" class="btn-close ps-5" aria-label="Close"></button> </h4>
   <div class="card-body shadow ListCard text-start">
     ${this.Todos} 
     </div>

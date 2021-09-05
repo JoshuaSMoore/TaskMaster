@@ -5,8 +5,8 @@ import { generateId } from "../Utils/generateId.js"
 export class Todo{
  constructor(TodoData){
   this.title = TodoData.title
+  this.id = TodoData.id || generateId()
   this.listItemid = TodoData.listItemid
-  this.id = TodoData.id || generateId
  }
 
 
@@ -16,7 +16,7 @@ export class Todo{
       <ul class = "">
     <input class="form-check-input me-1" type="checkbox" value="">
     ${this.title} </label>
-    <button onclick = "app.listItemsController.deleteListItem('${this.id}')" class="btn-close ps-5" aria-label="Close"></button>
+    <button onclick = "app.todoController.deleteTodo('${this.id}')" id = "deleted" class="btn-close ps-5" aria-label="Close"></button>
 
   </div>
 

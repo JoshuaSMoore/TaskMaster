@@ -30,15 +30,15 @@
       <div class="row">
         <div class="col-12 d-flex justify-content-start">  
           <div class="card-body">
-                <form onsubmit ="app.listItemsController.createNewList()">
+                <form onsubmit ="app.listItemsController.createNewList(event)">
                    <input type = "text" min-length="3" maxlength="30" required name = "listName" placeholder="New List">
                    <button type = "submit" class = "AddList">Add List </button>
-                   <select name="color">
-                     <option onclick="">color</option>
-                     <option onclick="">color</option>
-                     <option onclick="">color</option>
-                     <option onclick="">color</option>
-                     <option onclick="">color</option>
+                   <select type = "value" id="listColor">
+                     <option class="bg1">color</option>
+                     <option class="bg2">color</option>
+                     <option class="bg3">color</option>
+                     <option class="bg4">color</option>
+                     <option class="bg5">color</option>
                    </select>
                   </form> 
             </div>

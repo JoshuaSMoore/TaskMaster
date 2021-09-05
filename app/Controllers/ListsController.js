@@ -23,17 +23,17 @@ createNewList(){
   let form = event.target
 
   let listItemData = {
-    name: form.listName.value,
+    name: form.listName.value
+
   }
   listsService.createNewList(listItemData)
-  console.log("testing from List controller", listItemData)
   form.reset()
 
   }
 
 
-  deleteListItem(listItemid){
-    listsService.deleteListItem(listItemid)
+  deleteListItem(id){
+    listsService.deleteListItem(id)
     
   }
 

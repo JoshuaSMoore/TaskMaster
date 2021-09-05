@@ -1,10 +1,12 @@
 import { ProxyState } from "../AppState.js";
 import { Todo } from "../Models/Todo.js";
+import { saveState } from "../Utils/LocalStorage.js";
 
 
 
 class TodoService{
   constructor(){
+    ProxyState.on('todos', saveState)
   }
 
   createNewTodo(TodoData){

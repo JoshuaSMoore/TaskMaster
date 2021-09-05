@@ -1,10 +1,11 @@
 import { ProxyState } from "../AppState.js";
 import { List } from "../Models/List.js";
+import { saveState } from "../Utils/LocalStorage.js";
 
 class ListsService{
 
   constructor(){
-
+    ProxyState.on('listItems', saveState)
   }
 
   createNewList(listItemData, event){

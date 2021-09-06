@@ -10,9 +10,14 @@ class ListsService{
 
   createNewList(listItemData, event){
     ProxyState.listItems = [...ProxyState.listItems, new List(listItemData)]
-    swal({
-      icon: "success",
-    });
+    Swal.fire({
+      title: 'Sweet!',
+      imageUrl: 'https://wallpapertag.com/wallpaper/full/0/e/0/652133-goku-blue-wallpapers-1920x1080-for-iphone.jpg',
+      imageWidth: 400,
+      imageHeight: 200,
+      imageAlt: 'Custom image',
+    })
+     
     console.log("we did it list service", ProxyState.listItems)
 }
 
@@ -23,16 +28,10 @@ deleteListItem(listItemid){
 
   ProxyState.todos = ProxyState.todos.filter(todos => todos.id !== listItemid)
 
-  swal({
-    buttons: {
-      cancel: true,
-      confirm: "Confirm",
-      roll: {
-        text: "Do a barrell roll!",
-        value: "roll",
-      },
-    },
-  });
+  Swal.fire({
+    icon: 'error',
+    title: 'Later Gator!',
+  })
 
 }
 

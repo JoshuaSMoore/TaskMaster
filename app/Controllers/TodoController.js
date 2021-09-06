@@ -22,13 +22,20 @@ createNewTodo(listItemid){
     listItemid: listItemid,
     checked: false
   }
+  Swal.fire({
+    position: 'center',
+    icon: 'success',
+    title: 'Todo has been added',
+    showConfirmButton: false,
+    timer: 1500
+  })
   todoService.createNewTodo(TodoData)
   form.reset()
 }
 
 
 deleteTodo(id){
-  let i = confirm()
+  let i = confirm("Are you sure??")
     if(i == true){
       todoService.deleteTodo(id)
       swal({

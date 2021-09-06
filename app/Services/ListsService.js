@@ -10,6 +10,9 @@ class ListsService{
 
   createNewList(listItemData, event){
     ProxyState.listItems = [...ProxyState.listItems, new List(listItemData)]
+    swal({
+      icon: "success",
+    });
     console.log("we did it list service", ProxyState.listItems)
 }
 
@@ -19,6 +22,17 @@ deleteListItem(listItemid){
   ProxyState.listItems = ProxyState.listItems.filter(l => l.id !== listItemid)
 
   ProxyState.todos = ProxyState.todos.filter(todos => todos.id !== listItemid)
+
+  swal({
+    buttons: {
+      cancel: true,
+      confirm: "Confirm",
+      roll: {
+        text: "Do a barrell roll!",
+        value: "roll",
+      },
+    },
+  });
 
 }
 

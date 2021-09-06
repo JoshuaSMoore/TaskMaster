@@ -8,38 +8,32 @@
   <link rel="icon" href="https://bcw.blob.core.windows.net/public/img/9977764104160066">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
-
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@mdi/font@5.9.55/css/materialdesignicons.min.css">  
   <link rel="stylesheet" href="assets/style/main.css">
   <link rel="stylesheet" href="assets/style/style.css">
   <title>TaskMaster</title>
 </head>
 
-<body>
+<body class = background>
   <header>
-    <nav class="navbar navbar-dark navbar-expand bg-dark text-light no-select">
-      <a class="navbar-brand ms-3" href="#">
-        <img src="https://codeworks.blob.core.windows.net/public/assets/img/cw-mark.png" height="45" alt=""
-          loading="lazy">
-        <span class="ms-2">TaskMaster</span>
       </a>
     </nav>
-    <h1 class = "text-center p-3"> TaskMaster</h1>
+    <h1 class = "text-center p-3 bigtask"> TaskMaster</h1>
   </header>
   <main>
     <div class="container-fluid">
       <div class="row">
-        <div class="col-12 d-flex justify-content-start">  
+        <div class="col-12 d-flex justify-content-evenly">  
           <div class="card-body">
                 <form onsubmit ="app.listItemsController.createNewList(event)">
-                   <input type = "text" min-length="3" maxlength="30" required name = "listName" placeholder="New List">
-                   <button type = "submit" class = "AddList">Add List </button>
-                   <select type = "value" id="listColor">
-                     <option class="bg1">color</option>
-                     <option class="bg2">color</option>
-                     <option class="bg3">color</option>
-                     <option class="bg4">color</option>
-                     <option class="bg5">color</option>
-                   </select>
+                   <input type = "text"class = "list-list" min-length="3" maxlength="30" required name = "listName" placeholder="New List">
+                   <button type = "submit" class = "mdi mdi-list-status list-button">Add New List  </button>
+                   <label for="colorPicker"></label>
+                   <input type = "color" id="colorPicker" name="colorPicker">
+                  
                   </form> 
             </div>
           </div>
@@ -48,18 +42,24 @@
     <div class="container-fluid">
         <div class="row" id = "new-list">
           
-        </div>
+        
+    </div>
+    <div class="container">
+      <div class="row">
+        <!-- <span id = "completed">0 </span> -->
+      </div>
     </div>
   </main>
   <footer class="bg-dark text-light">
     <div class="text-center no-select">
-      <p><small>Made with 💖 by Codeworks</small></p>
+      <p><small>Made with 💖 by guy who got no sleep</small></p>
     </div>
   </footer>
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj"
     crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
   <script src="app/main.js" type="module"></script>
 </body>
 

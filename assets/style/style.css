@@ -1,27 +1,34 @@
 /* BASIC STYLES HERE */
-/* .colorpicker{
-  
+.background{
+  background-image: url(https://cdn.wallpapersafari.com/34/9/sEiXSm.jpg);
 }
-
-
-
-.todolist{
-  background-color = colorpicker
-} */
 
 
 .ListCard{
-  min-height: 30rem; 
-  max-width: 25rem; 
+ min-height: 25rem !important;
+ max-width: 35rem !important;
+  
+} 
 
-  
-  
+.todo-style{
+  font-family: 'ZCOOL KuaiLe', cursive;
 }
 
-.bg1{
-  color: green;
+.bigtask{
+  font-family: 'Lobster', cursive;
+  color: rgb(212, 84, 68);
 }
 
-.bg2{
-  color:crimson;
+.ListFont{
+  font-family: 'Alfa Slab One', cursive;
+}
+
+.list-button{
+  background-color: rgba(211, 129, 145, 0.24);
+  color: rgba(248, 248, 255, 0.726)
+}
+
+.list-list{
+  background-color: rgba(233, 47, 109, 0.219);
+  color: ghostwhite;
 }

@@ -1,5 +1,6 @@
 
 import { ProxyState } from "../AppState.js"
+import { Todo } from "../Models/Todo.js"
 import {todoService} from "../Services/TodoService.js"
 
 
@@ -18,7 +19,8 @@ createNewTodo(listItemid){
 
   let TodoData = {
     title: form.newTodo.value,
-    listItemid: listItemid
+    listItemid: listItemid,
+    checked: false
   }
   todoService.createNewTodo(TodoData)
   form.reset()
@@ -26,8 +28,25 @@ createNewTodo(listItemid){
 
 
 deleteTodo(id){
-  todoService.deleteTodo(id)
+  let i = confirm()
+    if(i == true){
+      todoService.deleteTodo(id)
+      swal({
+        icon: "success",
+      });
+    } else {}
+    
+  }
+
+
+
+completeTodo(id){
+ todoService.completeTodo(id)
+ 
 }
+
+
+
 
 }
 

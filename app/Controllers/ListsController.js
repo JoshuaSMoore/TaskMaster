@@ -18,22 +18,33 @@ export class ListsController {
   _drawLists()
 }
 
-createNewList(){
+createNewList(listItemid){
   event.preventDefault()
   let form = event.target
 
   let listItemData = {
-    name: form.listName.value
+    name: form.listName.value,
+    color: form.colorPicker.value
 
   }
   listsService.createNewList(listItemData)
   form.reset()
+  swal("Getrrr Done!!", {
+    button: false,
+  });
+  
 
   }
 
 
   deleteListItem(id){
-    listsService.deleteListItem(id)
+    let i = confirm("are you positive you want to get rid of this item?")
+    if(i == true){
+      listsService.deleteListItem(id)
+      swal({
+        icon: "success",
+      });
+    } else {}
     
   }
 

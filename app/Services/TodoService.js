@@ -12,6 +12,7 @@ class TodoService{
   createNewTodo(TodoData){
     ProxyState.todos = [...ProxyState.todos, new Todo(TodoData)]
     ProxyState.todos = ProxyState.todos
+    
     console.log('we didit task service', ProxyState.todos);
   }
 
@@ -20,10 +21,24 @@ class TodoService{
     
   }
 
+  completeTodo(id){ 
+ let todo = ProxyState.todos.find(t => id == t.id)
+  todo.checked = !todo.checked;
+  ProxyState.todos = ProxyState.todos
+  console.log(todo)
+  if(todo.checked == true) 
+  
+  console.log(count)
+  
 }
 
 
 
 
 
+}
 export const todoService = new TodoService()
+
+
+// let count = document.querySelectorAll('input,[type="checkbox"]:checked').length; 
+// document.getElementById('completed').innerHTML = count.toString()

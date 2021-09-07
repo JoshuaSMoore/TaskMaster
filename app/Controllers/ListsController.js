@@ -29,6 +29,7 @@ createNewList(listItemid){
   }
   listsService.createNewList(listItemData)
   form.reset()
+  // @ts-ignore
   swal("Getrrr Done!!", {
     button: false,
   });
@@ -41,6 +42,7 @@ createNewList(listItemid){
     let i = confirm("are you positive you want to get rid of this item?")
     if(i == true){
       listsService.deleteListItem(id)
+      // @ts-ignore
       swal({
         icon: "success",
       });

@@ -22,6 +22,7 @@ createNewTodo(listItemid){
     listItemid: listItemid,
     checked: false
   }
+  // @ts-ignore
   Swal.fire({
     position: 'center',
     icon: 'success',
@@ -38,6 +39,7 @@ deleteTodo(id){
   let i = confirm("Are you sure??")
     if(i == true){
       todoService.deleteTodo(id)
+      // @ts-ignore
       swal({
         icon: "success",
       });

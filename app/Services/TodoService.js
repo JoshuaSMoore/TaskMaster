@@ -13,6 +13,7 @@ class TodoService{
     ProxyState.todos = [...ProxyState.todos, new Todo(TodoData)]
     ProxyState.todos = ProxyState.todos
 
+    // @ts-ignore
     swal({
       icon: "success",
     });
@@ -22,6 +23,7 @@ class TodoService{
 
   deleteTodo(id){
     ProxyState.todos = ProxyState.todos.filter(t => t.id != id)
+    // @ts-ignore
     Swal.fire({
       icon: 'error',
       title: 'Later Gator!',

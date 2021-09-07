@@ -21,7 +21,7 @@ get Template(){
     </div>
     <div class="card-footer text-muted  bg-transparent text-center">
     <form onsubmit = "app.todoController.createNewTodo('${this.id}')">
-    <input type = "text" name ="newTodo" min-length="3" maxlength="50" required placeholder="New Todo"/>
+    <input type = "text" name ="newTodo" minlength="3" maxlength="50" required placeholder="New Todo"/>
     <button type = "submit" class = "btn btn secondary shadow">Add</button>
     </form>
     </div>

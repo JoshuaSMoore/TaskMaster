@@ -10,6 +10,7 @@ class ListsService{
 
   createNewList(listItemData, event){
     ProxyState.listItems = [...ProxyState.listItems, new List(listItemData)]
+    // @ts-ignore
     Swal.fire({
       title: 'Sweet!',
       imageUrl: 'https://wallpapertag.com/wallpaper/full/0/e/0/652133-goku-blue-wallpapers-1920x1080-for-iphone.jpg',
@@ -28,6 +29,7 @@ deleteListItem(listItemid){
 
   ProxyState.todos = ProxyState.todos.filter(todos => todos.id !== listItemid)
 
+  // @ts-ignore
   Swal.fire({
     icon: 'error',
     title: 'Later Gator!',
